@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -11,14 +11,8 @@
 
 </head>
 <body>
-<div id="waiting-div"></div>
-<div id="jsutils-dialog-wrapper">
-	<div id="jsutils-dialog">
-		<div id="jsutils-dialog-title">This is the Title</div>
-		<div id="jsutils-dialog-close">&times;</div>
-		<div id="jsutils-dialog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
-	</div>
-</div>
-<button id="open-dialog-button">Open</button>
+	<div id="waiting-div"></div>
+	<div th:replace="fragments/jsutils4spring :: jsutils-alert"></div>
+	<button id="open-dialog-button">Open</button>
 </body>
 </html>
